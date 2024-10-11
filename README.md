@@ -227,7 +227,7 @@ Contributions are welcome! Please follow these steps to contribute:
 2. **Clone Your Fork**
 
    ```bash
-   git clone https://github.com/yourusername/anomaly-detection-system.git
+   git clone https://github.com/Gamingpro237/Anomaly-detection-system.git
    cd anomaly-detection-system
    ```
 
