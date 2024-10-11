@@ -1,8 +1,6 @@
+# 🚀 Real-Time AI-Driven Anomaly Detection & Data Integration System 🌐
 
-# 🛠️ Anomaly Detection System for Manufacturing Sensor Data 🚀
-
-
-Welcome to the **Anomaly Detection System for Manufacturing Sensor Data**! This project leverages Microsoft Fabric and a suite of Azure services to monitor manufacturing equipment in real-time, detect anomalies, and provide actionable insights to optimize maintenance and reduce downtime.
+Welcome to the **Real-Time AI-Driven Anomaly Detection & Data Integration System**, an end-to-end project that leverages **Apache Kafka** for real-time data streaming, **Azure Data Lake** for secure storage, and **Power BI** for dynamic reporting and visualization. This project showcases how **RTI (Real-Time Integration)** can streamline data ingestion, anomaly detection, and business intelligence.
 
 ---
 
@@ -23,6 +21,14 @@ Welcome to the **Anomaly Detection System for Manufacturing Sensor Data**! This 
 ## 🔍 Overview
 
 Manufacturing industries rely heavily on sensor data to monitor equipment health and ensure smooth operations. Detecting anomalies early can prevent costly downtimes and extend the lifespan of machinery. This project integrates various Azure services to create a comprehensive anomaly detection pipeline:
+This project integrates **real-time data ingestion**, **anomaly detection**, and **data visualization** into one powerful system. The key components of the project are:
+
+- **Real-Time Data Streaming with Apache Kafka**
+- **Anomaly Detection using Isolation Forest (scikit-learn)**
+- **Data Storage and Management in Azure Data Lake**
+- **Data Visualization and Reporting with Power BI**
+- **Automated Power BI Data Refresh using Azure Logic Apps**
+- **Containerization with Docker Compose**
 
 1. **Data Ingestion:** Collects sensor data and stores it in Azure Data Lake.
 2. **Anomaly Detection:** Processes data using machine learning models in Azure Machine Learning.
@@ -32,16 +38,49 @@ Manufacturing industries rely heavily on sensor data to monitor equipment health
 
 ---
 
-## ✨ Features
+ ### 1. **Data Ingestion with Apache Kafka** 🛠️
+   - Real-time data ingestion from multiple sources using **Apache Kafka**.
+   - Simulate manufacturing sensor data streams in real-time for anomaly detection.
+   - Kafka brokers for streaming large amounts of data with high throughput.
 
-- **Secure Data Storage:** Utilizes Azure Data Lake Storage Gen2 for scalable and secure data storage.
-- **Machine Learning Integration:** Implements Isolation Forest algorithm for effective anomaly detection with Azure Machine Learning.
-- **Automated Workflows:** Orchestrates data ingestion, processing, and reporting using Azure Functions.
-- **Real-Time Visualization:** Interactive Power BI dashboards for monitoring sensor data and detected anomalies.
-- **Proactive Monitoring:** Azure Monitor alerts to notify stakeholders of system issues or detected anomalies.
-- **Secure Credentials Management:** Manages sensitive information with Azure Key Vault.
+### 2. **Anomaly Detection with Isolation Forest** 🤖
+   - AI-driven anomaly detection using **scikit-learn's Isolation Forest** algorithm.
+   - Detect anomalies in sensor data and alert based on thresholds.
+   - Real-time analysis to prevent potential equipment failure.
+
+### 3. **Azure Data Lake Integration** ☁️
+   - Store raw and processed data securely in **Azure Data Lake Storage**.
+   - Scalable cloud storage for long-term data management.
+   - Seamless integration with Azure services for big data workloads.
+
+### 4. **Power BI Integration & Automated Refresh** 📊
+   - Visualize processed data in **Power BI** with dynamic reports and dashboards.
+   - Automate Power BI data refresh using **Azure Logic Apps**.
+   - Enable business intelligence teams to monitor real-time data changes.
+
+### 5. **Real-Time Alerting and Monitoring** 🚨
+   - Immediate alerting using **SMTP email notifications** when anomalies are detected.
+   - Set up thresholds for critical alerts to enable proactive decision-making.
+
+### 6. **Containerization with Docker Compose** 🐳
+   - Use **Docker Compose** to orchestrate Apache Kafka, Zookeeper, and the Python applications.
+   - Easily scale the system with containerized services.
 
 ---
+
+## 🏗️ Project Architecture
+
+1. **Data Producer:** 
+   - Streams real-time sensor data from various sources into Apache Kafka.
+   
+2. **Data Consumer:**
+   - Consumes real-time sensor data, runs the Isolation Forest model to detect anomalies, and stores results in Azure Data Lake.
+
+3. **Power BI Reporting:**
+   - Visualize the detected anomalies and generate real-time business intelligence reports.
+
+4. **Automated Power BI Refresh:**
+   - Use Azure Logic Apps to automate Power BI data refresh, keeping reports up-to-date with the latest data.
 
 ## 🛠️ Technologies Used
 
@@ -52,6 +91,8 @@ Manufacturing industries rely heavily on sensor data to monitor equipment health
   - [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
   - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
   - [Power BI](https://powerbi.microsoft.com/)
+  - **Apache Kafka** for real-time data ingestion.
+- **Docker & Docker Compose** for container orchestration.
   
 - **Programming Languages & Libraries:**
   - [Python](https://www.python.org/)
@@ -179,7 +220,19 @@ Follow these steps to set up and run the Anomaly Detection System locally and de
    ```bash
    python orchestrator.py
    ```
+5. **Orchestrate anomaly**
 
+   Run the orchestrator anomaly script:
+
+   ```bash
+   python orchestrator-anomaly.py
+   ```
+6. **Set Up Docker Containers:**
+   ```bash
+   docker-compose up -d
+   ```
+
+   - This will spin up Apache Kafka, Zookeeper, and the Python applications for data ingestion and anomaly detection.
 ### ☁️ Deploying to Azure
 
 1. **Deploy Azure Functions**
@@ -200,6 +253,28 @@ Follow these steps to set up and run the Anomaly Detection System locally and de
 
 ---
 
+## 📊 Power BI Integration
+
+- To visualize the anomaly detection results in **Power BI**, connect your Power BI reports to the data stored in **Azure Data Lake**.
+- Set up a real-time dashboard that shows the status of your sensors and detected anomalies.
+- Use **Azure Logic Apps** to automate the refresh process, ensuring that your Power BI reports are always up-to-date.
+
+---
+
+## 🔔 Real-Time Alerts
+
+- Use **SMTP email notifications** to trigger alerts when anomalies are detected.
+- You can configure threshold levels to control when an alert is triggered, ensuring you're informed of critical issues as they occur.
+
+---
+
+## 🎉 How It All Works
+
+1. **Real-Time Data Ingestion:** The system ingests real-time sensor data into Apache Kafka.
+2. **Anomaly Detection:** Using AI (Isolation Forest), the system detects anomalies in sensor data.
+3. **Data Storage & Alerting:** Anomalies are stored in Azure Data Lake, and real-time alerts are sent via email.
+4. **Business Intelligence:** Power BI visualizes the anomaly data with automated refreshes, keeping reports up-to-date.
+
 ## 🗂️ Project Structure
 
 ```plaintext
@@ -207,11 +282,15 @@ anomaly-detection-system/
 ├── data_ingestion.py           # Script for data ingestion
 ├── anomaly_detection.py        # Script for anomaly detection
 ├── powerbi_refresh.py          # Script to refresh Power BI reports
-├── orchestrator.py             # Orchestrator script to run all steps
+├── orchestrator.py & orchestrator-anomaly           # Orchestrator script to run all steps
 ├── setup_alerts.py             # Script to set up Azure Monitor alerts
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # Project documentation
 ├── .env                        # Environment variables (not committed)
+├── data_producer.py           # Script for producing real-time sensor data to Kafka
+├── data_consumer.py           # Script for consuming data from Kafka and detecting anomalies
+├── alerting.py                # Script for sending real-time alerts
+├── docker-compose.yml         # Docker Compose file to set up Kafka and Zookeeper
 ```
 
 ---
