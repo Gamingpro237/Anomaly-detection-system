@@ -80,7 +80,7 @@ Follow these steps to set up and run the Anomaly Detection System locally and de
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/anomaly-detection-system.git
+   git clone https://github.com/Gamingpro237/Anomaly-detection-system.git
    cd anomaly-detection-system
    ```
 
