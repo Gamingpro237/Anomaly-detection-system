@@ -1,134 +1,50 @@
-# 🚀 Real-Time AI-Driven Anomaly Detection & Data Integration System 🌐
 
-Welcome to the **Real-Time AI-Driven Anomaly Detection & Data Integration System**, an end-to-end project that leverages **Apache Kafka** for real-time data streaming, **Azure Data Lake** for secure storage, and **Power BI** for dynamic reporting and visualization. This project showcases how **RTI (Real-Time Integration)** can streamline data ingestion, anomaly detection, and business intelligence.
+# 🛠️ Real-Time Document Analytics and Anomaly Detection System 🚀
 
----
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 
-## 📚 Table of Contents
+## 📖 Overview
 
-- [🔍 Overview](#-overview)
-- [✨ Features](#-features)
-- [🛠️ Technologies Used](#️️️️️️️️️️-technologies-used)
-- [⚙️ Setup & Installation](#️️️️️️️️️️-setup--installation)
-- [🚀 Usage](#-usage)
-- [🗂️ Project Structure](#️️️️️️️️️️-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [📞 Contact](#-contact)
+Welcome to the **Real-Time Document Analytics and Anomaly Detection System**! This project leverages **Microsoft Fabric's Real-Time Integration (RTI)** and **Artificial Intelligence (AI)** to solve real-world problems by integrating multiple data sources, performing document analysis, and detecting anomalies in real-time. 
 
----
+### 🧩 Key Features
 
-## 🔍 Overview
+- **📈 Real-Time Data Integration:** Utilizes Apache Kafka for seamless data streaming and integration from multiple sources.
+- **🔍 Document Analysis:** Implements Azure OpenAI services to analyze and extract insights from documents.
+- **⚠️ Anomaly Detection:** Employs a custom-trained AI model to identify unusual patterns and trigger alerts.
+- **📊 Real-Time Analytics & Monitoring:** Provides continuous monitoring and real-time analytics for actionable insights.
+- **📧 Alerting System:** Sends real-time email alerts upon detecting anomalies to ensure prompt responses.
 
-Manufacturing industries rely heavily on sensor data to monitor equipment health and ensure smooth operations. Detecting anomalies early can prevent costly downtimes and extend the lifespan of machinery. This project integrates various Azure services to create a comprehensive anomaly detection pipeline:
-This project integrates **real-time data ingestion**, **anomaly detection**, and **data visualization** into one powerful system. The key components of the project are:
+## 🚀 Getting Started
 
-- **Real-Time Data Streaming with Apache Kafka**
-- **Anomaly Detection using Isolation Forest (scikit-learn)**
-- **Data Storage and Management in Azure Data Lake**
-- **Data Visualization and Reporting with Power BI**
-- **Automated Power BI Data Refresh using Azure Logic Apps**
-- **Containerization with Docker Compose**
-
-1. **Data Ingestion:** Collects sensor data and stores it in Azure Data Lake.
-2. **Anomaly Detection:** Processes data using machine learning models in Azure Machine Learning.
-3. **Visualization:** Provides real-time dashboards with Power BI.
-4. **Orchestration:** Automates workflows using Azure Functions.
-5. **Security & Monitoring:** Ensures data security with Azure Key Vault and monitors system health with Azure Monitor.
-
----
-
- ### 1. **Data Ingestion with Apache Kafka** 🛠️
-   - Real-time data ingestion from multiple sources using **Apache Kafka**.
-   - Simulate manufacturing sensor data streams in real-time for anomaly detection.
-   - Kafka brokers for streaming large amounts of data with high throughput.
-
-### 2. **Anomaly Detection with Isolation Forest** 🤖
-   - AI-driven anomaly detection using **scikit-learn's Isolation Forest** algorithm.
-   - Detect anomalies in sensor data and alert based on thresholds.
-   - Real-time analysis to prevent potential equipment failure.
-
-### 3. **Azure Data Lake Integration** ☁️
-   - Store raw and processed data securely in **Azure Data Lake Storage**.
-   - Scalable cloud storage for long-term data management.
-   - Seamless integration with Azure services for big data workloads.
-
-### 4. **Power BI Integration & Automated Refresh** 📊
-   - Visualize processed data in **Power BI** with dynamic reports and dashboards.
-   - Automate Power BI data refresh using **Azure Logic Apps**.
-   - Enable business intelligence teams to monitor real-time data changes.
-
-### 5. **Real-Time Alerting and Monitoring** 🚨
-   - Immediate alerting using **SMTP email notifications** when anomalies are detected.
-   - Set up thresholds for critical alerts to enable proactive decision-making.
-
-### 6. **Containerization with Docker Compose** 🐳
-   - Use **Docker Compose** to orchestrate Apache Kafka, Zookeeper, and the Python applications.
-   - Easily scale the system with containerized services.
-
----
-
-## 🏗️ Project Architecture
-
-1. **Data Producer:** 
-   - Streams real-time sensor data from various sources into Apache Kafka.
-   
-2. **Data Consumer:**
-   - Consumes real-time sensor data, runs the Isolation Forest model to detect anomalies, and stores results in Azure Data Lake.
-
-3. **Power BI Reporting:**
-   - Visualize the detected anomalies and generate real-time business intelligence reports.
-
-4. **Automated Power BI Refresh:**
-   - Use Azure Logic Apps to automate Power BI data refresh, keeping reports up-to-date with the latest data.
-
-## 🛠️ Technologies Used
-
-- **Azure Services:**
-  - [Azure Data Lake Storage Gen2](https://azure.microsoft.com/en-us/services/storage/data-lake-storage/)
-  - [Azure Machine Learning](https://azure.microsoft.com/en-us/services/machine-learning/)
-  - [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)
-  - [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
-  - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
-  - [Power BI](https://powerbi.microsoft.com/)
-  - **Apache Kafka** for real-time data ingestion.
-- **Docker & Docker Compose** for container orchestration.
-  
-- **Programming Languages & Libraries:**
-  - [Python](https://www.python.org/)
-  - [Pandas](https://pandas.pydata.org/)
-  - [Scikit-learn](https://scikit-learn.org/)
-  - [Azure SDK for Python](https://azure.github.io/azure-sdk-for-python/)
-  - [Joblib](https://joblib.readthedocs.io/)
-  - [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-python)
-
----
-
-## ⚙️ Setup & Installation
-
-Follow these steps to set up and run the Anomaly Detection System locally and deploy it to Azure.
+Follow these instructions to set up and run the project on your local machine.
 
 ### 📋 Prerequisites
 
-- **Azure Account:** Ensure you have an active [Azure subscription](https://azure.microsoft.com/en-us/free/).
-- **Azure CLI:** Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) for managing Azure resources.
-- **Python 3.8+:** Install [Python](https://www.python.org/downloads/) and ensure it's added to your system's PATH.
-- **Git:** Install [Git](https://git-scm.com/downloads) for version control.
-- **Azure Functions Core Tools:** Install [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local) for local development.
+Before you begin, ensure you have met the following requirements:
 
-### 🔧 Installation Steps
+- **Python 3.8+** installed on your system. You can download it from [here](https://www.python.org/downloads/).
+- **Microsoft Azure Account** with access to:
+  - **Azure OpenAI Service**
+  - **Azure Event Hubs**
+  - **Azure Storage** (if needed)
+- **Apache Kafka** setup for real-time data streaming. You can download it from [here](https://kafka.apache.org/downloads).
+- **Git** installed on your system. Download it [here](https://git-scm.com/downloads).
+- **SMTP Credentials** for email alerting.
+
+### 🔧 Installation
 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Gamingpro237/Anomaly-detection-system.git
-   cd anomaly-detection-system
+   git clone https://github.com/your-username/real_time_analytics.git
+   cd real_time_analytics
    ```
 
-2. **Create a Virtual Environment**
+2. **Create and Activate a Virtual Environment**
 
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
@@ -138,224 +54,134 @@ Follow these steps to set up and run the Anomaly Detection System locally and de
    pip install -r requirements.txt
    ```
 
-4. **Configure Azure Services**
+### 📝 Configuration
 
-   - **Azure Data Lake Storage Gen2:**
-     - Create a Storage Account with Data Lake Storage Gen2 enabled.
-     - Note down the **Storage Account Name** and **Access Key**.
-   
-   - **Azure Key Vault:**
-     - Create a Key Vault to store secrets.
-     - Add the following secrets:
-       - `storage-account-key`: Your Storage Account Access Key.
-       - `azure-subscription-id`
-       - `azure-resource-group`
-       - `azure-ml-workspace-name`
-       - `azure-ml-workspace-secret`
-       - `powerbi-client-secret`
-   
-   - **Azure Machine Learning Workspace:**
-     - Set up an Azure ML Workspace.
-     - Note down the workspace details for configuration.
-   
-   - **Power BI:**
-     - Register an application in Azure AD for Power BI API access.
-     - Obtain the **Client ID**, **Client Secret**, and **Tenant ID**.
+1. **Set Up Azure Services**
 
-5. **Set Up Environment Variables**
+   - **Azure Event Hubs:** Create an Event Hub and obtain the connection string.
+   - **Azure OpenAI Service:** Set up the service and obtain the API key and endpoint.
 
-   Create a `.env` file in the project root and add the necessary environment variables:
+2. **Configure Environment Variables**
 
-   ```env
-   VAULT_URL=https://your-key-vault-name.vault.azure.net/
-   STORAGE_ACCOUNT_NAME=your_storage_account_name
-   STORAGE_ACCOUNT_KEY_SECRET=storage-account-key
-   AZURE_SUBSCRIPTION_ID=your_subscription_id
-   AZURE_RESOURCE_GROUP=your_resource_group
-   AZURE_ML_WORKSPACE_NAME=your_azure_ml_workspace
-   AZURE_ML_WORKSPACE_SECRET=azure-ml-workspace-secret
-   POWERBI_CLIENT_ID=your_powerbi_client_id
-   POWERBI_CLIENT_SECRET=your_powerbi_client_secret
-   TENANT_ID=your_tenant_id
-   POWERBI_WORKSPACE_ID=your_powerbi_workspace_id
-   POWERBI_DATASET_ID=your_powerbi_dataset_id
+   Create a `config.py` file in the project root with the following content. Replace the placeholder values with your actual credentials.
+
+   ```python
+   # config.py
+
+   # Azure Event Hub Configuration
+   EVENT_HUB_CONNECTION_STR = "Your_Azure_Event_Hub_Connection_String"
+   EVENT_HUB_NAME = "your-event-hub-name"
+
+   # Azure OpenAI Configuration
+   OPENAI_API_KEY = "Your_Azure_OpenAI_API_Key"
+   OPENAI_API_BASE = "https://your-openai-resource.openai.azure.com/"
+   OPENAI_API_VERSION = "2023-05-15"
+
+   # Kafka Configuration
+   KAFKA_BOOTSTRAP_SERVERS = ['localhost:9092']
+   KAFKA_TOPIC = 'real_time_data'
+
+   # Alerting Configuration
+   ALERT_EMAIL = "your_email@example.com"
+   SMTP_SERVER = "smtp.example.com"
+   SMTP_PORT = 587
+   SMTP_USERNAME = "your_smtp_username"
+   SMTP_PASSWORD = "your_smtp_password"
+
+   # Other Configurations
+   ANOMALY_THRESHOLD = 3.0  # For standard deviation-based anomaly detection
    ```
 
-6. **Run Setup Scripts**
+### 🏃‍♂️ Running the Project
 
-   - **Set Up Azure Monitor Alerts**
+1. **Start Apache Kafka**
 
-     ```bash
-     python setup_alerts.py
-     ```
-
----
-
-## 🚀 Usage
-
-### 🔄 Running the Pipeline Locally
-
-1. **Data Ingestion**
+   Ensure that your Kafka server is running. You can start Kafka using the following commands:
 
    ```bash
-   python data_ingestion.py
+   # Start Zookeeper
+   bin/zookeeper-server-start.sh config/zookeeper.properties
+
+   # Start Kafka Broker
+   bin/kafka-server-start.sh config/server.properties
    ```
 
-2. **Anomaly Detection**
+2. **Start the Data Producer**
+
+   Open a new terminal window/tab, activate the virtual environment, navigate to the project directory, and run:
 
    ```bash
-   python anomaly_detection.py
+   python data_producer.py
    ```
 
-3. **Power BI Report Refresh**
+   This script simulates real-time data production by sending random sensor data and document content to the Kafka topic.
+
+3. **Run the Main Orchestrator**
+
+   Open another terminal window/tab, activate the virtual environment, navigate to the project directory, and run:
 
    ```bash
-   python powerbi_refresh.py
+   python main.py
    ```
 
-4. **Orchestrate the Workflow**
+   This script consumes data from Kafka, performs anomaly detection, analyzes documents, and sends alerts as necessary.
 
-   Run the orchestrator script to execute all steps sequentially:
+## 📂 Project Structure
 
-   ```bash
-   python orchestrator.py
-   ```
-5. **Orchestrate anomaly**
-
-   Run the orchestrator anomaly script:
-
-   ```bash
-   python orchestrator-anomaly.py
-   ```
-6. **Set Up Docker Containers:**
-   ```bash
-   docker-compose up -d
-   ```
-
-   - This will spin up Apache Kafka, Zookeeper, and the Python applications for data ingestion and anomaly detection.
-### ☁️ Deploying to Azure
-
-1. **Deploy Azure Functions**
-
-   ```bash
-   func azure functionapp publish your-function-app-name
-   ```
-
-2. **Configure Azure Functions**
-
-   - Ensure all environment variables are set in the Azure Function App settings.
-   - Set up Timer Triggers to automate the workflow execution.
-
-3. **Monitor and Manage**
-
-   - Use Azure Monitor to track the health and performance of your functions.
-   - View logs and set up alerts as configured.
-
----
-
-## 📊 Power BI Integration
-
-- To visualize the anomaly detection results in **Power BI**, connect your Power BI reports to the data stored in **Azure Data Lake**.
-- Set up a real-time dashboard that shows the status of your sensors and detected anomalies.
-- Use **Azure Logic Apps** to automate the refresh process, ensuring that your Power BI reports are always up-to-date.
-
----
-
-## 🔔 Real-Time Alerts
-
-- Use **SMTP email notifications** to trigger alerts when anomalies are detected.
-- You can configure threshold levels to control when an alert is triggered, ensuring you're informed of critical issues as they occur.
-
----
-
-## 🎉 How It All Works
-
-1. **Real-Time Data Ingestion:** The system ingests real-time sensor data into Apache Kafka.
-2. **Anomaly Detection:** Using AI (Isolation Forest), the system detects anomalies in sensor data.
-3. **Data Storage & Alerting:** Anomalies are stored in Azure Data Lake, and real-time alerts are sent via email.
-4. **Business Intelligence:** Power BI visualizes the anomaly data with automated refreshes, keeping reports up-to-date.
-
-## 🗂️ Project Structure
-
-```plaintext
-anomaly-detection-system/
-├── data_ingestion.py           # Script for data ingestion
-├── anomaly_detection.py        # Script for anomaly detection
-├── powerbi_refresh.py          # Script to refresh Power BI reports
-├── orchestrator.py & orchestrator-anomaly           # Orchestrator script to run all steps
-├── setup_alerts.py             # Script to set up Azure Monitor alerts
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
-├── .env                        # Environment variables (not committed)
-├── data_producer.py           # Script for producing real-time sensor data to Kafka
-├── data_consumer.py           # Script for consuming data from Kafka and detecting anomalies
-├── alerting.py                # Script for sending real-time alerts
-├── docker-compose.yml         # Docker Compose file to set up Kafka and Zookeeper
+```
+real_time_analytics/
+├── data_producer.py          # Simulates real-time data production
+├── data_consumer.py          # Consumes real-time data from Kafka
+├── anomaly_detection.py      # Implements anomaly detection logic
+├── document_analysis.py      # Performs document analysis using Azure OpenAI
+├── alerting.py               # Handles sending email alerts
+├── utils.py                  # Utility functions
+├── main.py                   # Orchestrates the data processing workflow
+├── config.py                 # Configuration file for credentials and settings
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
 ```
 
----
+## 📚 Detailed Explanation
+
+### 🔄 Data Integration and RTI
+
+- **Data Producer (`data_producer.py`):** Simulates multiple data sources by generating random sensor data and document content. Sends this data to an Apache Kafka topic in real-time.
+- **Data Consumer (`data_consumer.py`):** Listens to the Kafka topic and consumes incoming data in real-time for further processing.
+
+### 🧠 Artificial Intelligence Integration
+
+- **Anomaly Detection (`anomaly_detection.py`):** Utilizes a statistical method to detect anomalies in sensor data. If a sensor value deviates beyond a specified threshold (e.g., 3 standard deviations from the mean), it triggers an alert.
+- **Document Analysis (`document_analysis.py`):** Uses Azure OpenAI's GPT model to analyze incoming document content and extract key insights.
+
+### 📈 Real-Time Analytics and Alerting
+
+- **Alerting (`alerting.py`):** Sends real-time email alerts when anomalies are detected in the sensor data.
+- **Utilities (`utils.py`):** Contains helper functions like timestamp generation and importing alerting functions.
+
+### 🎛️ Orchestration (`main.py`)
+
+The `main.py` script ties all components together. It continuously consumes data from Kafka, performs anomaly detection, and analyzes documents in real-time.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps to contribute:
+Contributions are welcome! Please follow these steps:
 
-1. **Fork the Repository**
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/YourFeature`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/YourFeature`.
+5. Open a pull request.
 
-   Click the **Fork** button at the top right of this page.
+## 📄 License
 
-2. **Clone Your Fork**
+This project is licensed under the [Apache2.0 License](LICENSE).
 
-   ```bash
-   git clone https://github.com/Gamingpro237/Anomaly-detection-system.git
-   cd anomaly-detection-system
-   ```
+## 📧 Contact
 
-3. **Create a Feature Branch**
-
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-4. **Commit Your Changes**
-
-   ```bash
-   git commit -m "Add your descriptive commit message"
-   ```
-
-5. **Push to Your Fork**
-
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-6. **Create a Pull Request**
-
-   Navigate to the original repository and click **Compare & pull request**.
+For any questions or feedback, feel free to reach out at [your_email@example.com](mailto:your_email@example.com).
 
 ---
 
-## 📜 License
-
-This project is licensed under the [Apache 2.0 License](LICENSE).
-
----
-
-## 📞 Contact
-
-For any inquiries or support, please contact:
-
-- **Your Name**
-- **Email:** your.email@example.com
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-
----
-
-## 📝 Acknowledgements
-
-- [Azure Documentation](https://docs.microsoft.com/en-us/azure/)
-- [Power BI Documentation](https://docs.microsoft.com/en-us/power-bi/)
-- [Scikit-learn Documentation](https://scikit-learn.org/)
-- [Pandas Documentation](https://pandas.pydata.org/)
-
----
+✨ Thank you for checking out the **Real-Time Document Analytics and Anomaly Detection System**! We hope it serves as a valuable tool in integrating real-time data processing with advanced AI capabilities.
 ```
